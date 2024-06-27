@@ -24,9 +24,9 @@ JaVite aims to provide an excellent Developer Experience (DX) by combining the s
 
 - **[Vite-Powered:](https://vitejs.dev/)** Instant server start, with edits instantly reflected (<100ms) without page reload.
 
-- **[Custom JSP Tags & Thymeleaf Dialects:](./usage)** Easily import and manage Vite-generated assets in your JSP and Thymeleaf templates, simplifying the integration of modern JavaScript and CSS.
+- **[Custom JSP Tags & Thymeleaf Dialects:](#path-to-usage)** Easily import and manage Vite-generated assets in your JSP and Thymeleaf templates, simplifying the integration of modern JavaScript and CSS.
 
-- **[Seamless Configuration:](./configuration)** Configure JaVite through simple properties in your `application.properties` or `application.yml` files to define paths and settings for Vite assets.
+- **[Seamless Configuration:](#path-to-configuration)** Configure JaVite through simple properties in your `application.properties` or `application.yml` files to define paths and settings for Vite assets.
 
 ## Performance
 
