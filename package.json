@@ -5,7 +5,7 @@
     "vitepress": "^1.2.3"
   },
   "scripts": {
-    "fetch-version": "./scripts/fetch-latest-version.sh",
+    "fetch-version": "node ./scripts/fetch-latest-version.mjs",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
