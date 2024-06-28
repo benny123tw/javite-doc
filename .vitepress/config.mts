@@ -7,6 +7,10 @@ export default defineConfig({
   description: "Vite-Powered Java Integration",
   lastUpdated: true,
   cleanUrls: true,
+  ignoreDeadLinks: [
+    // ignore all localhost links
+    /^https?:\/\/localhost/,
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
