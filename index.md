@@ -2,6 +2,9 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
+title: JaVite
+titleTemplate: Vite-Powered Java Integration
+
 hero:
   name: "JaVite"
   text: "Vite-Powered Java Integration"
@@ -28,30 +31,3 @@ features:
     title: Spring MVC JSP & Thymeleaf
     details: Full support for legacy Spring MVC JSP projects and Thymeleaf templates.
 ---
-
-<style>
-:root {
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #ff4c4c 30%, #ff9900);
-
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, #ff4c4c 50%, #ff9900 50%);
-  --vp-home-hero-image-filter: blur(44px);
-
-  --vp-button-brand-bg: #ff4c4c;
-  --vp-button-brand-hover-bg: #ff6666;
-  --vp-button-brand-active-bg: #cc3b3b;
-}
-
-@media (min-width: 640px) {
-  :root {
-    --vp-home-hero-image-filter: blur(56px);
-  }
-}
-
-@media (min-width: 960px) {
-  :root {
-    --vp-home-hero-image-filter: blur(68px);
-  }
-}
-
-</style>
