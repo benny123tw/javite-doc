@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { readFileSync } from 'node:fs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -9,6 +10,19 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Guide', link: '/guide/getting-started' },
+      // empty string will be '...' in the UI
+      { text: readFileSync('latest_version', 'utf-8') || '', items: 
+        [
+          {
+            text: 'Release Notes',
+            link: 'https://github.com/benny123tw/javite/releases',
+          },
+          {
+            text: 'Contributing',
+            link: 'https://github.com/benny123tw/javite/blob/main/CONTRIBUTING.md',
+          },
+        ] 
+      }
     ],
 
     sidebar: [
