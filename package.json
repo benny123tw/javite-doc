@@ -1,10 +1,16 @@
 {
   "devDependencies": {
+    "@types/dom-view-transitions": "^1.0.4",
+    "@types/node": "^20.14.9",
     "vitepress": "^1.2.3"
   },
   "scripts": {
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
+    "fetch-version": ".\\scripts\\fetch-latest-version.sh",
+    "docs:dev": "pnpm run fetch-version && vitepress dev",
+    "docs:build": "pnpm run fetch-version && vitepress build",
     "docs:preview": "vitepress preview"
+  },
+  "dependencies": {
+    "vue": "^3.4.30"
   }
 }
