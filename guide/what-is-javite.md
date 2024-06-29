@@ -4,7 +4,7 @@ JaVite is a module that seamlessly integrates Vite, a modern front-end build too
 
 <div class="tip custom-block" style="padding-top: 8px">
 
-Just want to try it out? Skip to the [Quickstart](./getting-started).
+Just want to try it out? Skip to the [Quickstart](./index).
 
 </div>
 
