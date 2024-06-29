@@ -2,8 +2,6 @@
 
 The JaVite Thymeleaf dialect allows you to use Vite in your Java web application with Thymeleaf templates. Ensure you have configured the dialect in your Spring configuration.
 
-```html
-
 ## Installation
 
 :::code-group
