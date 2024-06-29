@@ -15,9 +15,9 @@ hero:
       link: /guide/what-is-javite
     - theme: alt
       text: Get Started
-      link: /guide/getting-started
+      link: /guide/
   image:
-    src: /duke.svg
+    src: /duke_wave.svg
     alt: JaVite
 
 features:

@@ -38,6 +38,8 @@ project-root/
     └── package.json
 ```
 
+We could easily separate the client and server directories for better organization. The `server` directory contains the Java web application, while the `client` directory contains the Vite project. 
+
 ## Installation
 
 ### 1. Add JaVite to Your Project

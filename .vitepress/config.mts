@@ -1,5 +1,16 @@
-import { defineConfig } from 'vitepress'
+import { DefaultTheme, defineConfig } from 'vitepress'
 import { readFileSync } from 'node:fs'
+
+const Guides: DefaultTheme.NavItemWithLink[] = [
+  { text: 'What is JaVite?', link: '/guide/what-is-javite' },
+  { text: 'Getting Started', link: '/guide/' },
+  { text: 'Vite Plugin', link: '/guide/vite-plugin' },
+]
+
+const Integrations: DefaultTheme.NavItemWithLink[] = [
+  { text: 'JSP', link: '/integrations/jsp' },
+  { text: 'Thymeleaf', link: '/integrations/thymeleaf' },
+]
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -19,16 +30,7 @@ export default defineConfig({
         [
           {
             text: 'Guide',
-            items: [
-              {
-                text: 'What is JaVite?',
-                link: '/guide/what-is-javite',
-              },
-              {
-                text: 'Getting started',
-                link: '/guide/getting-started',
-              },
-            ],
+            items: Guides,
           }
         ],
         activeMatch: '^/guide/'
@@ -53,12 +55,14 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Introduction',
+        text: 'Guides',
         collapsed: false,
-        items: [
-          { text: 'What is JaVite?', link: '/guide/what-is-javite' },
-          { text: 'Getting Started', link: '/guide/getting-started' }
-        ]
+        items: Guides,
+      },
+      {
+        text: 'Integrations',
+        collapsed: false,
+        items: Integrations,
       }
     ],
 
@@ -66,7 +70,7 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/benny123tw/javite' }, 
     ],
 
-    logo: { src: '/duke.svg', width: 24, height: 24 },
+    logo: { src: '/duke_wave.svg', width: 24, height: 24 },
 
     editLink: {
       pattern: 'https://github.com/benny123tw/javite-doc/edit/main/:path',
@@ -79,14 +83,14 @@ export default defineConfig({
   },
 
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/duke.svg' }],
-    ['link', { rel: 'icon', type: 'image/png', href: '/duke.png' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/duke_wave.svg' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/duke_wave.png' }],
     ['meta', { name: 'theme-color', content: '#ff4c4c' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:locale', content: 'en' }],
     ['meta', { property: 'og:title', content: 'JaVite | Vite-Powered Java Integration' }],
     ['meta', { property: 'og:site_name', content: 'JaVite' }],
-    // ['meta', { property: 'og:image', content: 'https://vitepress.dev/vitepress-og.jpg' }],
+    ['meta', { property: 'og:image', content: 'https://javite.com/og.png' }],
     ['meta', { property: 'og:url', content: 'https://javite.com/' }],
   ]
 })
