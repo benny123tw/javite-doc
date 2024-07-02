@@ -125,7 +125,49 @@ The directory where your public assets are located. This directory is served by 
 - Type: `string`
 - Default: `dist`
 
-The directory where the Vite-generated assets are outputted.
+The directory where the Vite-generated assets are outputted. Same as the `outDir` option in the Vite configuration.
+
+If you are using a Java framework like Spring MVC, you can set this option to the directory where your Java application serves static assets. For example, in a Spring MVC application:
+
+```java
+@Configuration
+@EnableWebMvc
+@ComponentScan(basePackages = "com.example",
+        includeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, value = Controller.class))
+public class WebConfig implements WebMvcConfigurer {
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/resources/**") // Change this to the buildDirectory
+                .addResourceLocations("/WEB-INF/dist/"); // Change this to the outputDirectory
+    }
+
+}
+```
+
+Also, if you set the `outputDirectory` or `outDir` to the external directory, you can use the `emptyOutDir` option to clear the external output directory before building.
+
+```js
+export default defineConfig({
+  build: {
+    outDir: '../server/src/main/webapp/WEB-INF/dist',
+    emptyOutDir: true
+  }
+})
+
+// or
+
+export default defineConfig({
+  build: {
+    emptyOutDir: true,
+  },
+  plugins: [
+    java({
+      outputDirectory: '../server/src/main/webapp/WEB-INF/dist',
+    })
+  ]
+})
+```
 
 ### `buildDirectory`
 
@@ -133,6 +175,24 @@ The directory where the Vite-generated assets are outputted.
 - Default: `resources`
 
 The directory where the Vite-generated assets are served from in your Java application.
+
+You can use this option to configure the resource handler in your Java application. For example, in a Spring MVC application:
+
+```java
+@Configuration
+@EnableWebMvc
+@ComponentScan(basePackages = "com.example",
+        includeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, value = Controller.class))
+public class WebConfig implements WebMvcConfigurer {
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/resources/**") // Change this to the buildDirectory
+                .addResourceLocations("/WEB-INF/dist/"); // Change this to the outputDirectory
+    }
+
+}
+```
 
 ### `transformOnSave`
 
@@ -175,3 +235,28 @@ import { readPropertiesFile } from 'vite-plugin-java'
 
 const properties = readPropertiesFile('src/main/resources/*.properties')
 ```
+
+## Custom Base URLs
+
+If your Vite compiled assets are deployed to a domain separate from your application, such as via a CDN, you must specify the `ASSET_URL` environment variable within your application's `.env` file:
+
+```properties
+ASSET_URL=https://cdn.example.com/
+```
+
+After configuring the asset URL, all re-written URLs to your assets will be prefixed with the configured value:
+
+```markdown
+https://cdn.example.com/build/assets/app.9dce8d17.js
+```
+
+Remember that absolute URLs are not re-written by Vite, so they will not be prefixed.
+
+## Environment Variables
+
+The `vite-plugin-java` plugin uses the following environment variables:
+
+- `VITE_PORT`: The port number for the Vite development server. Default is `5137`.
+- `VITE_DEV_SERVER_KEY`: The key used to certify the Vite development server.
+- `VITE_DEV_SERVER_CERT`: The certificate used to certify the Vite development server.
+- `APP_URL`: The URL of the Java application.
