@@ -1,4 +1,4 @@
-# Java Servlet Pages (JSP) Integration
+# Java Servlet Pages (JSP) Integration 🌐
 
 The JaVite JSP integration allows you to use Vite in your Java web application with JSP templates.
 

@@ -1,4 +1,8 @@
-# Thymeleaf Integration
+# Thymeleaf Integration 🍃
+
+::: warning ⚠️ Work in Progress
+This feature is not yet available. Please check back later for updates.
+:::
 
 The JaVite Thymeleaf dialect allows you to use Vite in your Java web application with Thymeleaf templates. Ensure you have configured the dialect in your Spring configuration.
 
