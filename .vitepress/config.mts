@@ -13,7 +13,8 @@ const Integrations: DefaultTheme.NavItemWithLink[] = [
 ]
 
 const Examples: DefaultTheme.NavItemWithLink[] = [
-  { text: 'Vite & JSP', link: '/examples/jsp' },
+  { text: 'Vite &JSP', link: '/examples/jsp' },
+  { text: 'Vite &Thymeleaf', link: '/examples/thymeleaf' },
 ]
 
 // https://vitepress.dev/reference/site-config
