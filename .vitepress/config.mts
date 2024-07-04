@@ -12,6 +12,10 @@ const Integrations: DefaultTheme.NavItemWithLink[] = [
   { text: 'Thymeleaf', link: '/integrations/thymeleaf' },
 ]
 
+const Examples: DefaultTheme.NavItemWithLink[] = [
+  { text: 'Vite & JSP', link: '/examples/jsp' },
+]
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "JaVite",
@@ -34,6 +38,26 @@ export default defineConfig({
           }
         ],
         activeMatch: '^/guide/'
+      },
+      {
+        text: 'Integrations',
+        items:
+        [
+          {
+            text: 'Integrations',
+            items: Integrations,
+          }
+        ],
+      },
+      {
+        text: 'Examples',
+        items:
+        [
+          {
+            text: 'Examples',
+            items: Examples,
+          }
+        ],
       },
       // empty string will be '...' in the UI
       { text: readFileSync('latest_version', 'utf-8') || '', items: 
@@ -63,7 +87,12 @@ export default defineConfig({
         text: 'Integrations',
         collapsed: false,
         items: Integrations,
-      }
+      },
+      {
+        text: 'Examples',
+        collapsed: false,
+        items: Examples,
+      },
     ],
 
     socialLinks: [
