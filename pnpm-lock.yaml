@@ -18,6 +18,9 @@ importers:
       '@types/node':
         specifier: ^20.14.9
         version: 20.14.9
+      picocolors:
+        specifier: ^1.0.1
+        version: 1.0.1
       vitepress:
         specifier: ^1.2.3
         version: 1.2.3(@algolia/client-search@4.24.0)(@types/node@20.14.9)(postcss@8.4.38)(search-insights@2.14.0)

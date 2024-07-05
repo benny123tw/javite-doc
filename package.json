@@ -2,6 +2,7 @@
   "devDependencies": {
     "@types/dom-view-transitions": "^1.0.4",
     "@types/node": "^20.14.9",
+    "picocolors": "^1.0.1",
     "vitepress": "^1.2.3"
   },
   "scripts": {
