@@ -4,20 +4,19 @@ outline: deep
 
 # Vite & JSP Demo
 
-This demo shows how to use Vite in a Java web application with JSP templates.
+This demo shows how to use Vite in a Spring web application with JSP templates.
 
 Source code: [GitHub](https://github.com/benny123tw/vite-jsp-demo)
 
-## Getting Started
-
-### Prerequisites
+## Prerequisites
 
 - Java 8
 - Maven 3.6.3 or later
+- Tomcat 9.0.X
 - Node.js 20 or later
-- Pnpm 9.4.0 or later
+- pnpm 9.4.0 or later
 
-### Installation
+## Installation
 
 1. Clone the repository:
 
@@ -39,9 +38,9 @@ Source code: [GitHub](https://github.com/benny123tw/vite-jsp-demo)
    pnpm install --frozen-lockfile
    ```
 
-### Run the Application
+## Run the Application
 
-#### Start the Spring MVC server
+### Start the Spring MVC server
 
 In this example, we will use Intellij IDEA to run the Spring MVC server. You could configure the server with your favorite IDE or run it with the command line.
 
@@ -55,7 +54,7 @@ In this example, we will use Intellij IDEA to run the Spring MVC server. You cou
 8. Switch to the Startup/Connection tab and add the Environment variable `spring.profiles.active` with the value `prod`.
 9. Click run to start the server in production mode; click the debug button to start the server in debug mode.
 
-#### Start the Vite development server
+### Start the Vite development server
 
 ```sh
 cd vite-demo
@@ -66,7 +65,7 @@ After you run the above command, you will see the following output in the consol
 
 <<< @/snippets/init.ansi
 
-#### Build and run in production mode
+### Build and run in production mode
 
 1. **Build the frontend assets**:
    ```sh
@@ -84,7 +83,7 @@ After you run the above command, you will see the following output in the consol
     - Start your servlet container (e.g., Tomcat).
     - Access the application at the configured URL, for example, `http://localhost:8989/spring_mvc/hello`.
 
-### Running the Application with Docker
+## Running the Application with Docker
 
 You can also run the application using Docker:
 
@@ -101,7 +100,7 @@ You can also run the application using Docker:
 3. **Access the application**:
    Open your browser and navigate to `http://localhost:8989/spring_mvc/hello`
 
-### Project Structure
+## Project Structure
 
 - **src/main/java/com/benny**: Contains Java source files
     - **bean**: Bean definitions
