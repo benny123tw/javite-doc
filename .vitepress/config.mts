@@ -5,6 +5,7 @@ const Guides: DefaultTheme.NavItemWithLink[] = [
   { text: 'What is JaVite?', link: '/guide/what-is-javite' },
   { text: 'Getting Started', link: '/guide/' },
   { text: 'Vite Plugin', link: '/guide/vite-plugin' },
+  { text: 'Troubleshooting', link: '/guide/troubleshooting' },
 ]
 
 const Integrations: DefaultTheme.NavItemWithLink[] = [
