@@ -9,13 +9,13 @@ Add the `javite-webmvc` dependency to your project:
 :::code-group
 ```groovy [build.gradle]
 dependencies {
-    implementation 'com.javite:javite-webmvc:0.1.3'
+    implementation 'com.javite:javite-webmvc:0.1.5'
 }
 ```
 
 ```kotlin [build.gradle.kts]
 dependencies {
-    implementation("com.javite:javite-webmvc:0.1.3")
+    implementation("com.javite:javite-webmvc:0.1.5")
 }
 ```
 
@@ -23,7 +23,7 @@ dependencies {
 <dependency>
     <groupId>com.javite</groupId>
     <artifactId>javite-webmvc</artifactId>
-    <version>0.1.3</version>
+    <version>0.1.5</version>
 </dependency>
 ```
 :::
@@ -33,13 +33,13 @@ For Java 8 support, please use `javite-webmvc-jre8`:
 :::code-group
 ```groovy [build.gradle]
 dependencies {
-    implementation 'com.javite:javite-webmvc-jre8:0.1.3'
+    implementation 'com.javite:javite-webmvc-jre8:0.1.5'
 }
 ```
 
 ```kotlin [build.gradle.kts]
 dependencies {
-    implementation("com.javite:javite-webmvc-jre8:0.1.3")
+    implementation("com.javite:javite-webmvc-jre8:0.1.5")
 }
 ```
 
@@ -47,7 +47,7 @@ dependencies {
 <dependency>
     <groupId>com.javite</groupId>
     <artifactId>javite-webmvc-jre8</artifactId>
-    <version>0.1.3</version>
+    <version>0.1.5</version>
 </dependency>
 ```
 :::

@@ -4,9 +4,10 @@
   "author": "Benny Yen <benny123tw@gmail.com>",
   "private": "true",
   "scripts": {
-    "fetch-version": "node ./scripts/fetch-latest-version.mjs",
-    "docs:dev": "pnpm run fetch-version && vitepress dev",
-    "docs:build": "pnpm run fetch-version && vitepress build",
+    "version:fetch": "node ./scripts/fetch-latest-version.mjs",
+    "version:replace": "node ./scripts/replace-installation-version.mjs",
+    "docs:dev": "pnpm run version:fetch && pnpm run version:replace && vitepress dev",
+    "docs:build": "pnpm run version:fetch && pnpm run version:replace && vitepress build",
     "docs:preview": "vitepress preview"
   },
   "dependencies": {
@@ -16,6 +17,7 @@
     "@shikijs/vitepress-twoslash": "^1.10.3",
     "@types/dom-view-transitions": "^1.0.4",
     "@types/node": "^20.14.10",
+    "glob": "^11.0.0",
     "picocolors": "^1.0.1",
     "vite": "^5.3.3",
     "vite-plugin-java": "^0.0.3",

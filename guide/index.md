@@ -49,13 +49,13 @@ Add the following dependency to your `build.gradle` or `pom.xml` file:
 :::code-group
 ```groovy [build.gradle]
 dependencies {
-    implementation 'com.javite:javite-webmvc:0.1.3'
+    implementation 'com.javite:javite-webmvc:0.1.5'
 }
 ```
 
 ```kotlin [build.gradle.kts]
 dependencies {
-    implementation("com.javite:javite-webmvc:0.1.3")
+    implementation("com.javite:javite-webmvc:0.1.5")
 }
 ```
 
@@ -63,7 +63,7 @@ dependencies {
 <dependency>
     <groupId>com.javite</groupId>
     <artifactId>javite-webmvc</artifactId>
-    <version>0.1.3</version>
+    <version>0.1.5</version>
 </dependency>
 ```
 :::
@@ -73,13 +73,13 @@ For Java 8 support, please use `javite-webmvc-jre8`:
 :::code-group
 ```groovy [build.gradle]
 dependencies {
-    implementation 'com.javite:javite-webmvc-jre8:0.1.3'
+    implementation 'com.javite:javite-webmvc-jre8:0.1.5'
 }
 ```
 
 ```kotlin [build.gradle.kts]
 dependencies {
-    implementation("com.javite:javite-webmvc-jre8:0.1.3")
+    implementation("com.javite:javite-webmvc-jre8:0.1.5")
 }
 ```
 
@@ -87,7 +87,7 @@ dependencies {
 <dependency>
     <groupId>com.javite</groupId>
     <artifactId>javite-webmvc-jre8</artifactId>
-    <version>0.1.3</version>
+    <version>0.1.5</version>
 </dependency>
 ```
 :::
@@ -146,7 +146,7 @@ npm install -D vite-plugin-java
 ```
 
 ```sh [pnpm]
-pnpm install -D vite-plugin-java
+pnpm add -D vite-plugin-java
 ```
 
 ```sh [yarn]
@@ -164,9 +164,9 @@ bun add -D vite-plugin-java
 
 In your Vite project, update the `vite.config.js` file to output the manifest file:
 
-```ts
-import { defineConfig } from 'vite';
-import java, { createRollupInputConfig } from 'vite-plugin-java';
+```js twoslash
+import { defineConfig } from 'vite'
+import java, { createRollupInputConfig } from 'vite-plugin-java'
 
 export default defineConfig({
   build: {
@@ -198,7 +198,7 @@ export default defineConfig({
       input: createRollupInputConfig('src/**/main.ts', 'src'),
     }),
   ],
-});
+})
 ```
 
 The `input` option in the `java` plugin configuration specifies the entry files for your Vite project. The `createRollupInputConfig` function fetches all the main entry files based on the provided pattern. You can customize this pattern based on your project structure.
