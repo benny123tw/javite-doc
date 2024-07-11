@@ -1,4 +1,5 @@
 import { DefaultTheme, defineConfig } from 'vitepress'
+import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { readFileSync } from 'node:fs'
 
 const Guides: DefaultTheme.NavItemWithLink[] = [
@@ -123,5 +124,8 @@ export default defineConfig({
     ['meta', { property: 'og:site_name', content: 'JaVite' }],
     ['meta', { property: 'og:image', content: 'https://javite.com/og.png' }],
     ['meta', { property: 'og:url', content: 'https://javite.com/' }],
-  ]
+  ],
+  markdown: {
+    codeTransformers: [transformerTwoslash()]
+  }
 })
