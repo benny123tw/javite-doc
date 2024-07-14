@@ -67,11 +67,11 @@ export default defineConfig({
         [
           {
             text: 'Release Notes',
-            link: 'https://github.com/benny123tw/javite/releases',
+            link: 'https://github.com/javite-projects/javite/releases',
           },
           {
             text: 'Contributing',
-            link: 'https://github.com/benny123tw/javite/blob/main/CONTRIBUTING.md',
+            link: 'https://github.com/javite-projects/javite/blob/main/CONTRIBUTING.md',
           },
         ] 
       }
@@ -99,13 +99,13 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/benny123tw/javite' }, 
+      { icon: 'github', link: 'https://github.com/javite-projects/javite' }, 
     ],
 
     logo: { src: '/duke_wave.svg', width: 24, height: 24 },
 
     editLink: {
-      pattern: 'https://github.com/benny123tw/javite-doc/edit/main/:path',
+      pattern: 'https://github.com/javite-projects/javite-doc/edit/main/:path',
       text: 'Suggest changes to this page',
     },
     footer: {
