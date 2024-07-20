@@ -10,7 +10,7 @@ For example, if you have an issue with the `log4j-to-slf4j` dependency, you can 
 <dependency>
   <groupId>com.javite</groupId>
   <artifactId>javite-webmvc-jre8</artifactId>
-  <version>0.1.5</version>
+  <version>0.1.6</version>
   <exclusions>
     <exclusion>
       <groupId>org.apache.logging.log4j</groupId>

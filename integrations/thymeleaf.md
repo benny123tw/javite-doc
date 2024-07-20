@@ -11,13 +11,13 @@ The JaVite Thymeleaf dialect allows you to use Vite in your Java web application
 :::code-group
 ```groovy [build.gradle]
 dependencies {
-    implementation 'com.javite:javite-webmvc:0.1.5'
+    implementation 'com.javite:javite-webmvc:0.1.6'
 }
 ```
 
 ```kotlin [build.gradle.kts]
 dependencies {
-    implementation("com.javite:javite-webmvc:0.1.5")
+    implementation("com.javite:javite-webmvc:0.1.6")
 }
 ```
 
@@ -25,7 +25,7 @@ dependencies {
 <dependency>
     <groupId>com.javite</groupId>
     <artifactId>javite-webmvc</artifactId>
-    <version>0.1.5</version>
+    <version>0.1.6</version>
 </dependency>
 ```
 :::
